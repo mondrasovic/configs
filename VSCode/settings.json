@@ -1,0 +1,58 @@
+{
+    "autoDocstring.docstringFormat": "numpy-notypes",
+    "editor.wordWrap": "on",
+    "editor.rulers": [
+        100
+    ],
+    "editor.fontSize": 14.5,
+    "editor.glyphMargin": false,
+    "editor.folding": true,
+    "jupyter.notebookFileRoot": "${workspaceFolder}",
+    "notebook.output.textLineLimit": 500,
+    "security.workspace.trust.untrustedFiles": "open",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "j"
+            ],
+            "after": [
+                "g",
+                "j"
+            ]
+        },
+        {
+            "before": [
+                "k"
+            ],
+            "after": [
+                "g",
+                "k"
+            ]
+        }
+    ],
+    "vim.handleKeys": {
+        "<C-p>": false,
+        "<C-k>": false
+    },
+    "vim.vimrc.enable": true,
+    "vim.vimrc.path": "/home/mond/.vimrc",
+    "vim.useSystemClipboard": true,
+    "vim.smartRelativeLine": true,
+    "window.zoomLevel": 0,
+    "workbench.startupEditor": "none",
+    "workbench.tips.enabled": false,
+    "workbench.colorTheme": "Gruvbox Dark Soft",
+    "jupyter.allowUnauthorizedRemoteConnection": true,
+    "remote.autoForwardPortsSource": "hybrid",
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff"
+    },
+    "makefile.configureOnOpen": false,
+    "gitlab.duoCodeSuggestions.enabled": false,
+    "gitlab.duoChat.enabled": false,
+    "ruff.configuration": "/home/mond/Documents/rir/ruff.toml",
+    "jupyter.widgetScriptSources": [
+        "jsdelivr.com",
+        "unpkg.com"
+    ]
+}
