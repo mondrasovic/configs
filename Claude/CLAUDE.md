@@ -1,34 +1,33 @@
-# Personal Information
-
-- I am a Python machine learning platform engineer
-- I am interested in object-oriented programming but I like solutions based on functional paradigm
-- I focus on improving my skills in software architecture design (if possible, try to connect the discussed topic to SOLID principles)
-- I use the Linux operating system
-
 # General Guidelines
 
-- In all interactions, always provide concise responses to save time while making sure that relevant details are not omitted
-- Be as scientifically rigorous as possible, but preserve practicality and common sense
-- Be skeptical towards my claims
-- Prefer not to provide responses for which you do not have sufficient confidence
+- Provide concise responses while making sure that relevant details are not omitted
+- Follow SOLID principles
 
-# Source Code-Specific Guidelines
+# Source Code-Specific
 
-- Always follow the code style of the given module, including docstrings
+- Follow the code style of the given module
 - When adding executable code into docstrings, use `<code>` (e.g., `enabled=True`)
+- For type hints, use abstraction on the input but concrete types on the output, i.e., `def f(arr: Iterable[str]) -> list[int]:` except for unit tests which should always use concrete types
+- Do not use `dict` as a type hint, but prefer `dict[str, Any]` if applicable
+- Never use relative imports unless necessary
+- Prefer importing identifiers directly when they are part of our codebase, but 3rd party modules should be imported as a whole (e.g., `from rir_models.labels import Attribute` and `import more_itertools`)
 
-# Running Tests
+# Plan Mode
 
-- First, the required Python environment has to be activated using `micromamba activate rir`
-- Execute `pytest` command with the following flags: `--last-failed --maxfail=1 --force-short-summary --disable-warnings --no-header --quiet`
+- Make the plan multi-phase provided the changes are complex enough
+- At the end of each plan, provide a list of unresolved questions. Make the questions concise and straightforward
 
 # Git
 
-- Prioritize short commit messages but add details to the commit description if appropriate
-- Prefer short commits with minimal diffs that encapsulate a single change that is focused to a given module
+- Prioritize short commit messages but add details to the commit description
+- When creating branches, prefix them with "mo/" and use dashes to separate individual words (e.g., "mo/azure-ocr")
+- Prefer short commits with minimal diffs that encapsulate a single change focused to a given module
+- Find an appropriate GitMoji to describe the commit intent (e.g. "morgan: :sparkles: Implement support for multi-threading")
+- Start each commit message with a module name, e.g. "commons: Add support for checkboxes in Azure OCR"
 - Make sure that the order of commits is logical and the codebase is always testable after each commit
-- When adding docstrings or type hints to existing code (i.e., following the "Scout Rule"), make sure that these changes are made prior to implementing new features and committed separately to minimize noise in diffs during review
+- When adding docstrings or type hints to existing code, make sure that these changes are made prior to implementing new features and committed separately
 
-# Plans
+# Running Tests
 
-- At the end of each plan, provide a list of unresolved questions (if any). Make the questions very concise and straightforward
+- Use `micromamba activate rir` to activate the Python environment
+- Use `pytest --last-failed --maxfail=1 --force-short-summary --disable-warnings --no-header --quiet` to run test
